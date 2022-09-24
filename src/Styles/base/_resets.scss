@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+* {
+    font-family: $spaceFont;
+    font-weight: $weight;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

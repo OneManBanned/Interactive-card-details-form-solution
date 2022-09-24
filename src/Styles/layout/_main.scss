@@ -1,0 +1,168 @@
+@use '../abstracts' as *;
+
+body {
+    background-position: top left;
+    background-image: url('/bg-main-mobile.png');
+    background-repeat: no-repeat;
+
+
+    @include dt {
+        background-position: top left/35.5%;
+        background-image: url('/bg-main-desktop.png');
+        background-repeat: no-repeat;
+    }
+}
+
+.cards {
+    margin: 2rem 1rem 0 1rem;
+    height: 13.75rem;
+    position: relative;
+
+    @include dt {
+        margin: 0 0 0 12%;
+        width: 40%;
+        height: 100vh;
+    }
+
+    p {
+        position: absolute;
+        z-index: 3;
+    }
+
+    &__name {
+        color: $light-grayish-violet;
+        top: 88%;
+        left: 6%;
+        text-transform: uppercase;
+        font-size: .55rem;
+        letter-spacing: 0.05rem;
+
+        @include dt {
+            top: 43%;
+            left: 6%;
+            font-size: .85rem;
+        }
+    }
+
+    &__date {
+        color: $light-grayish-violet;
+        top: 88%;
+        right: 21%;
+        font-size: .55rem;
+        letter-spacing: 0.05rem;
+
+        @include dt {
+            top: 43%;
+            right: 23%;
+            font-size: .85rem;
+        }
+    }
+
+    &__cardNumber {
+        color: $light-grayish-violet;
+        top: 71%;
+        left: 6%;
+        letter-spacing: 0.08rem;
+
+        @include dt {
+            top: 34%;
+            left: 6%;
+            font-size: 1.5rem;
+            letter-spacing: .15rem;
+        }
+    }
+
+    &__cvc {
+        top: 29%;
+        right: 11.25%;
+        font-size: .55rem;
+        color: white;
+        letter-spacing: 0.03rem;
+
+        @include dt {
+            top: 72%;
+            right: 11%;
+            font-size: .8rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+    &__front {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 85%;
+        z-index: 2;
+
+        @include dt {
+            top: 12.5%;
+            left: 0;
+            width: 82%;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        z-index: 3;
+        bottom: 44%;
+        left: 6%;
+        width: 16%;
+
+        @include dt {
+            top: 17%;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        width: 85%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        @include dt {
+            position: absolute;
+            width: 82%;
+            top: 55%;
+            bottom: 0;
+        }
+    }
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+
+    &__thx {
+        color: $very-dark-violet;
+        letter-spacing: .15rem;
+        margin: 2rem 0 1rem 0;
+        font-size: 1.65rem;
+    }
+
+    &__text {
+        color: $dark-grayish-violet;
+        margin-bottom: 2rem;
+        letter-spacing: .03rem;
+    }
+
+    &__btn {
+        width: 85%;
+
+        @include dt {
+            width: 100%;
+        }
+    }
+}
+
+.formSection {
+
+    @include dt {
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        width: 21rem;
+    }
+}

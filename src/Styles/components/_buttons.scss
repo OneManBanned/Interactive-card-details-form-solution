@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+button {
+    height: 3rem;
+    border-radius: .35rem;
+    background-color: $very-dark-violet;
+    color: $light-grayish-violet;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+button:focus {
+    outline-width: 0;
+    border-image-slice: 1;
+    border-radius: .35rem;
+    border: double 3px transparent;
+    background-image: linear-gradient($very-dark-violet, $very-dark-violet),
+        $linear-gradient;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
